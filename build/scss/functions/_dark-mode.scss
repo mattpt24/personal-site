@@ -1,0 +1,65 @@
+.dark-mode-icon,
+.icon-container,
+.dark-mode-title,
+.dark-mode-text,
+body {
+    transition: all .2s ease;
+}
+
+// DARK MODE TOGGLES
+
+
+.icon-container {
+    @include icon-button;
+    background: rgba(0,0,0,.1);
+}
+
+
+
+
+.dark-mode-icon {
+    font-size: 1.6rem;
+}
+
+.dark-mode--titles-toggle {
+    color: $clr-dark-mode--title;
+}
+
+.dark-mode--icon-container-toggle {
+    background: rgba(255,255,255,.1);
+}
+
+.dark-mode--icons-toggle {
+    color: $clr-dark-mode--title;
+    border-radius: 10px;
+}
+
+
+.dark-mode--text-toggle {
+    color: $clr-dark-mode--text;
+}
+
+.dark-mode--menu-toggle {
+    background: $clr-dark-mode--background!important;
+}
+
+
+.dark-mode--back-in-time-btn-toggle {
+    background: rgba(255,255,255,.1)!important;
+    color: $clr-dark-mode--title;
+}
+
+.dark-mode--btn-toggle {
+    background: #5553CF;
+    box-shadow: 0 0 20px rgba(255, 255, 182, 0.608);
+}
+
+
+.dark-mode--background-toggle {
+    background: $clr-dark-mode--background!important;
+}
+
+
+
+
+// 

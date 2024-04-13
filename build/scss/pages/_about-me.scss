@@ -1,0 +1,278 @@
+.about-me {
+
+
+    .about-me__container {
+        width: 80%;
+        margin: 12rem auto 4rem auto;
+
+        @media screen and (max-width:$tablet) {
+           width: 90%;
+           margin: 12rem auto 2rem auto;
+        }
+
+
+        .about-me-intro {
+            margin-bottom: 3rem;
+            @media screen and (max-width:$tablet) {
+                margin-bottom: 2rem;
+             }
+
+
+            .section-title {
+                margin-bottom: 2rem;
+            }
+
+            .about__intro-text {
+            font-size: 5.2rem;
+            font-weight: 900;
+            letter-spacing: -3px;
+            margin: .8rem 0;
+            @media screen and (max-width:$laptop) {
+                font-size: 4.4rem;
+            }
+            @media screen and (max-width:$tablet) {
+                font-size: 3.7rem;
+            }
+            @media screen and (max-width:$mobile) {
+                font-size: 3.2rem;
+                letter-spacing: -2px;
+                display: inline;
+                width: 100%;
+            }
+            }
+        }
+
+
+
+
+
+
+        .about-me__content {
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 4rem;
+
+            @media screen and (max-width:$tablet) {
+              grid-template-columns: 1fr;
+              grid-gap: 2rem;
+            }
+
+
+            .about-me__column {
+
+
+                &.image-side {
+                    position: relative;
+
+                    @media screen and (max-width:$tablet) {
+                       height: 400px;
+                     }
+
+                    img {
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                        top: 0;
+                        left: 0;
+                        border-radius: 20px;
+                        object: {
+                            fit: cover;
+                            position: center;
+                        }
+                    }
+                }
+
+
+
+                .about-me__bio {
+                p {
+                    line-height: 1.5;
+                    font-size: 1.2rem;
+                    margin: 1.4rem 0;
+                    opacity: .5;
+
+                    &:nth-child(1) {
+                        font-weight: $fw-3;
+                        font-size: 1.8rem;
+                        font-family: $ff-main;
+                        letter-spacing: -1px;
+                        opacity: 1;
+                    }
+                }
+                }
+
+
+
+
+
+
+                .about-me__skills {
+                    
+                    h4 {
+                        font-size: 1.2rem;
+                        margin-top: 4rem;
+                    }
+
+
+                    .skills__container {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr 1fr 1fr;
+                        grid-gap: 1rem;
+                        margin-top: 3rem;
+
+
+                        @media screen and (max-width:$laptop) {
+                            grid-template-columns: 1fr 1fr 1fr;
+                        }
+                        @media screen and (max-width:$mobile) {
+                            grid-template-columns: 1fr 1fr;
+                        }
+
+                        .skill {
+                            transition: all .3s ease;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                            gap: 2rem;
+                            padding: 3rem 0;
+                            background: rgba(0,0,0,0.05);
+                            border-radius: 15px;
+                            font-weight: 400;
+                            font-size: 1.1rem;
+
+
+
+                            &.skill-html {
+                                &:hover {
+                                    transition: all .3s ease;
+                                    background: rgba(227, 76, 38, 0.134);
+                                }
+                                &:hover > i {
+                                    color:#e34c26;
+                                }
+                            }
+
+                            &.skill-css {
+                                &:hover {
+                                    transition: all .3s ease;
+                                    background: rgb(41, 101, 241,.1);
+                                }
+                                &:hover > i {
+                                    color:#2965f1;
+                                }
+                            }
+                            &.skill-js {
+                                &:hover {
+                                    transition: all .3s ease;
+                                    background: rgb(240, 219, 79,.1);
+                                }
+                                &:hover > i {
+                                    color:#f0db4f;
+                                }
+                            }
+                            &.skill-sass {
+                                &:hover {
+                                    transition: all .3s ease;
+                                    background: rgba(204, 102, 153, 0.1);
+                                }
+                                &:hover > i {
+                                    color:#cc6699;
+                                }
+                            }
+                            &.skill-react {
+                                &:hover {
+                                    transition: all .3s ease;
+                                    background: rgb(97, 219, 251,.1);
+                                }
+                                &:hover > i {
+                                    color:#61DBFB;
+                                }
+                            }
+                            &.skill-gulp {
+                                &:hover {
+                                    transition: all .3s ease;
+                                    background: rgb(211, 74, 71,.1);
+                                }
+                                &:hover > i {
+                                    color:#d34a47;
+                                }
+                            }
+                            &.skill-php {
+                                &:hover {
+                                    transition: all .3s ease;
+                                    background: rgb(137, 147, 190,.1);
+                                }
+                                &:hover > i {
+                                    color:#8993be;
+                                }
+                            }
+
+                            &.skill-wordpress {
+                                &:hover {
+                                    transition: all .3s ease;
+                                    background: rgba(0,0,0,0.15);
+                                } 
+                            }
+
+                            &.skill-jquery {
+                                &:hover {
+                                    transition: all .3s ease;
+                                    background: rgba(7, 104, 173, 0.118);
+                                }
+                                &:hover > i {
+                                    color: #0769AD;
+                                }
+                            }
+
+                            &.skill-sql {
+                                &:hover {
+                                    transition: all .3s ease;
+                                    background: rgb(0, 117, 143,.1);
+                                }
+                                &:hover > i {
+                                    color:#f29111;
+                                }
+                            }
+
+                            &.skill-git {
+                                &:hover {
+                                    transition: all .3s ease;
+                                    background: rgb(62, 44, 0,.1);
+                                }
+                                &:hover > i {
+                                    color:#F1502F;
+                                }
+                            }
+
+                            &.skill-github {
+                                &:hover {
+                                    transition: all .3s ease;
+                                    background: rgba(103, 24, 103, 0.2);
+                                }
+                            }
+
+
+                            i {
+                                font-size: 4rem;
+                            }
+                        }
+
+
+                    }
+
+
+                }
+
+                .btn {
+                    display: block;
+                    width: 100%;
+                    margin-top: 2rem;
+                    font-size: 1.1rem;
+                    padding:1.8rem 0;
+                }
+
+            }
+        }
+    }
+}

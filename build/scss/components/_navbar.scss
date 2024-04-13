@@ -1,0 +1,39 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 990;
+
+    @media screen and (max-width:$tablet) {
+        background: rgba(255,255,255,0);
+        backdrop-filter: blur(10px);
+        border-bottom: solid 1px rgba(139, 139, 139, 0.244);
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 97%;
+        padding: .8rem 0;
+        margin: 0 auto;
+
+        @media screen and (max-width:$tablet) {
+            width: 90%;
+        }
+
+        .navbar__logo {
+            font-size: 2rem;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+
+
+        .navbar-btn-container {
+            display: flex;
+            align-items: center;
+            gap:.4rem;
+        }
+    }
+}

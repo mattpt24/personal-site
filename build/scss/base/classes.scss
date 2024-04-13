@@ -1,0 +1,24 @@
+.color-txt {
+    color: $clr-primary;
+}
+
+
+.bold-txt {
+    font-weight: $fw-4;
+}
+
+
+.section-title {
+    text-transform: uppercase;
+    color: $clr-primary;
+    letter-spacing:10px;
+    font-size: 1.1rem;
+    font-weight: 900;
+}
+
+
+
+.overflow-hidden {
+    overflow: hidden;
+    margin: 0!important;
+}

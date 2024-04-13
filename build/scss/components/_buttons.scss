@@ -1,0 +1,16 @@
+.btn {
+    transition: all .3s ease;
+    padding: 1rem 2rem;
+    text-align: center;
+    border-radius: 15px;
+
+    &.btn--primary {
+        background: $clr-primary;
+        color: white;
+
+        &:hover {
+            transition: all .3s ease;
+            box-shadow: 0 5px 15px $clr-primary;
+        }
+    }
+}

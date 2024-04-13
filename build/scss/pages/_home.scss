@@ -1,0 +1,222 @@
+#landing {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+    .landing__container {
+        padding: 2rem;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 100%;
+        position: relative;
+
+        @media screen and (max-width:$tablet) {
+           padding: 3rem 0rem 3rem 2rem;
+           width: 95%;
+        }
+        @media screen and (max-width:$mobile) {
+            width: 90%;
+            margin:  0 auto;
+            padding: 8rem 0 6rem 0;
+         }
+
+
+
+        // TITLE / DARK MODE & MENU BUTTON
+        .landing__title-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            z-index: 99;
+
+
+            .top-menu-btns {
+                @media screen and (max-width:$tablet) {
+                    position: fixed;
+                    top: 1rem;
+                    right: 1rem;
+                }
+            }
+
+
+            .dark-mode-btn, .open-menu-btn {
+                transition: all .4s ease;
+                @include icon-button;
+                &:hover {
+                    transition: all .4s ease;
+                    background: $clr-primary;
+                    box-shadow: 0 0 10px $clr-primary;
+                }
+                &:hover > i {
+                    transition: all .4s ease;
+                    color: white;
+                }
+
+                i {
+                    font-size: 1.6rem;
+                }
+            }
+
+
+            .landing__title-container {
+                overflow: hidden;
+
+                .landing__title {
+                    font-weight: $fw-4;
+                    font-size: 7.5rem;
+                    letter-spacing: -3px;
+                    transform: translateY(-105%);
+                    animation: landing-titles-animation .5s ease;
+                    animation-fill-mode: forwards;
+                    padding: .5rem;
+
+                   &.title-line-1 {
+                    animation-delay: 1.25s;
+                    @media screen and (max-width:$mobile) {
+                        font-size: 3.3rem;
+                      }
+                   }
+                   &.title-line-2 {
+                    animation-delay: 1.35s;
+                    @media screen and (max-width:$mobile) {
+                        font-size: 2.2rem;
+                      }
+                   }
+                   &.title-line-3 {
+                    animation-delay: 1.45s;
+                    @media screen and (max-width:$mobile) {
+                        font-size: 2.8rem;
+                        letter-spacing: -2px;
+                      }
+                   }
+
+                   @media screen and (max-width:$desktop) {
+                    font-size: 5.4rem;
+                    }
+                    @media screen and (max-width:$laptop) {
+                        font-size: 4.2rem;
+                    }
+                    @media screen and (max-width:$tablet) {
+                        font-size: 4rem;
+                    }
+                    @media screen and (max-width:$mobile) {
+                        letter-spacing: -1px;
+                      }
+                }
+            }
+
+
+
+            .top-menu-btns {
+                display: flex;
+                gap: 1rem;
+
+                a {
+                    @include icon-button;
+
+                    i {
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+        }
+        // 
+
+
+
+
+        // SOCIALS / BASED IN 
+        .landing__bottom-content {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            @media screen and (max-width:$tablet) {
+                gap: 2rem;
+            }
+
+            @media screen and (max-width: $mobile) {
+                flex-direction: column-reverse;
+            }
+
+            .landing__socials-container {
+                display: flex;
+                gap: 1rem;
+
+                a {
+                    @include icon-button;
+                    transform: scale(0);
+                    animation: landing-icons-animation .4s ease;
+                    animation-fill-mode: forwards;
+                    animation-delay: 2s;
+
+                    i {
+                        transition: all 0s ease;
+                        font-size: 1.6rem;
+                    }
+
+                    &:hover {
+                        background: $clr-primary;
+                        box-shadow: 0 0 10px $clr-primary;
+                        color: white;
+                        transform:translateY(-5px);
+                    }
+
+                    &:nth-child(1) {
+                        animation-delay: 1.55s;
+                    }
+                    &:nth-child(2) {
+                        animation-delay: 1.65s;
+                    }
+                    &:nth-child(3) {
+                        animation-delay: 1.75s;
+                    }
+                    &:nth-child(4) {
+                        animation-delay: 1.85s;
+                    }
+                }
+            }
+
+            h2 {
+                font-size: 3rem;
+                letter-spacing: -3px;
+                transform: translateY(105%);
+                animation: landing-titles-animation .5s ease;
+                animation-fill-mode: forwards;
+                animation-delay: 2s;
+                @media screen and (max-width:$mobile) {
+                    font-size: 2.3rem;
+                    letter-spacing: -1px;
+                  }
+            }
+        }
+        // 
+
+
+
+
+    }
+}
+
+
+
+
+
+@keyframes landing-titles-animation {
+    from {
+        transform: translateY(105%);
+    }
+    to {
+        transform: translateY(0)
+    }
+}
+
+@keyframes landing-icons-animation {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}

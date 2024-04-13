@@ -1,0 +1,27 @@
+
+// BASE
+@import "./base/variables.scss";
+@import "./base/defaults.scss";
+@import "./base/mixins.scss";
+@import "./base/classes.scss";
+
+
+
+// FUNCTIONS
+@import "./functions/dark-mode.scss";
+@import "./functions/entrance-animation";
+
+// COMPONENTS
+@import "./components/buttons";
+@import "./components/titles";
+@import "./components/menu";
+@import "./components/navbar";
+@import "./components/footer";
+@import "./components/previous-sites";
+
+
+// PAGES
+@import "./pages/home";
+@import "./pages/portfolio";
+@import "./pages/about-me";
+@import "./pages/portfolio";
