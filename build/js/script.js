@@ -49,3 +49,19 @@ if (openProjectsBtn) {
       });
     }
   }
+
+
+
+
+const myText = document.querySelector(".email");
+const button = document.querySelector(".copy-to-clipboard");
+
+
+if(myText) {
+button.addEventListener("click", function(){
+    myText.select();
+    document.execCommand("copy");
+    button.innerText = "Copied!";
+    button.classList.add("copied-text");
+});
+}

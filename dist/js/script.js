@@ -135,3 +135,13 @@ if (closeProjectsBtn) {
     _loop2(y);
   }
 }
+var myText = document.querySelector(".email");
+var button = document.querySelector(".copy-to-clipboard");
+if (myText) {
+  button.addEventListener("click", function () {
+    myText.select();
+    document.execCommand("copy");
+    button.innerText = "Copied!";
+    button.classList.add("copied-text");
+  });
+}

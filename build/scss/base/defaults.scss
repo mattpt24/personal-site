@@ -2,6 +2,11 @@
 *, *::before,*::after {
     box-sizing: border-box;
   }
+
+  *::selection {
+    background: $clr-primary;
+    color: white;
+}
   
   * {
     margin: 0;
@@ -21,6 +26,7 @@
     line-height: 1;
     text-rendering: optimizeSpeed;
     background: #ECEAE4;
+    letter-spacing: -0.5px;
   }
   
   // all media elements set to block and full width

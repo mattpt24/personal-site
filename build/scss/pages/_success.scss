@@ -1,0 +1,72 @@
+.success {
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width:$mobile) {
+        height: 100vh;
+    }
+
+    .success__container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.4rem;
+        width: 90%;
+        margin: 0 auto;
+        @media screen and (max-width:$mobile) {
+                gap: 1rem;
+        }
+
+        i {
+            font-size: 10rem;
+            color: $clr-primary;
+            animation: flipInX 1s ease;
+        }
+
+        h2 {
+            font-weight: 900;
+            font-size: 3rem;
+            opacity: 0;
+            animation: textEntrance .5s ease;
+            animation-fill-mode: forwards;
+            animation-delay: 1.15s;
+            @media screen and (max-width:$mobile) {
+                font-size: 2rem;;
+            }
+        }
+
+        .form-success-message {
+            margin: 2rem 0 1rem 0;
+            color: grey;
+            opacity: 0;
+            animation: textEntrance .5s ease;
+            animation-fill-mode: forwards;
+            animation-delay: 1.25s;
+            line-height: 1.5;
+            font-size: 1.2rem;
+        }
+
+        a {
+            opacity: 0;
+            animation: textEntrance .5s ease;
+            animation-fill-mode: forwards;
+            animation-delay: 1.25s;
+        }
+    }
+}
+
+
+@keyframes textEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
