@@ -45,57 +45,19 @@ menuNavLinks.forEach(function (y) {
 console.log(menuNavLinks);
 "use strict";
 
-var darkModeToggleBtn = document.querySelector(".dark-mode-btn");
-var darkModeTitles = document.querySelectorAll(".dark-mode-title");
-var darkModeText = document.querySelectorAll(".dark-mode-text");
-var darkModeIcons = document.querySelectorAll(".dark-mode-icon");
-var darkModeIconContainers = document.querySelectorAll(".icon-container");
-var dropdownMenu = document.querySelector(".dropdown-menu__container");
-var backInTimeBtn = document.querySelector(".back-in-time--toggle");
-var imageOverlay = document.querySelector(".image-overlay");
-var navbarLogo = document.querySelector(".navbar__logo");
-var isDarkMode = localStorage.getItem('isDarkMode') === 'true';
-
-// if (isDarkMode) {
-//     applyDarkMode();
-// }
-
-darkModeToggleBtn.addEventListener("click", function () {
-  isDarkMode = !isDarkMode;
-  localStorage.setItem('isDarkMode', isDarkMode);
-  applyDarkMode();
-});
-function applyDarkMode() {
-  darkModeTitles.forEach(function (x) {
-    x.classList.toggle("dark-mode--titles-toggle");
-  });
-  darkModeIcons.forEach(function (x) {
-    x.classList.toggle("dark-mode--icons-toggle");
-  });
-  darkModeIconContainers.forEach(function (x) {
-    x.classList.toggle("dark-mode--icon-container-toggle");
-  });
-  darkModeText.forEach(function (x) {
-    x.classList.toggle("dark-mode--text-toggle");
-  });
-  darkModeToggleBtn.classList.toggle("dark-mode--btn-toggle");
-  imageOverlay.classList.toggle("dark-mode--background-toggle");
-  document.body.classList.toggle("dark-mode--background-toggle");
-  dropdownMenu.classList.toggle("dark-mode--menu-toggle");
-  backInTimeBtn.classList.toggle("dark-mode--back-in-time-btn-toggle");
-  navbarLogo.classList.toggle("dark-mode--titles-toggle");
-}
-"use strict";
-
 var backInTimeContainer = document.querySelector(".back-in-time");
 var backInTimeVideo = document.querySelector("video");
 var openBackInTimeBtn = document.querySelector(".back-in-time--toggle");
 var closeBackInTimeBtn = document.querySelector(".back-in-time--toggle-close");
+var previousSitesContent = document.querySelector(".back-in-time__content");
 if (openBackInTimeBtn) {
   openBackInTimeBtn.addEventListener("click", function () {
     backInTimeVideo.currentTime = 0;
     backInTimeContainer.classList.add("back-in-time--activated");
     backInTimeVideo.play();
+    setTimeout(function () {
+      previousSitesContent.classList.add("back-in-time--content-enter");
+    }, 1000);
   });
 }
 if (closeBackInTimeBtn) {

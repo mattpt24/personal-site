@@ -1,13 +1,19 @@
+
+
 const backInTimeContainer  = document.querySelector(".back-in-time");
 const backInTimeVideo = document.querySelector("video");
 const openBackInTimeBtn = document.querySelector(".back-in-time--toggle");
 const closeBackInTimeBtn = document.querySelector(".back-in-time--toggle-close");
+const previousSitesContent = document.querySelector(".back-in-time__content");
 
 if(openBackInTimeBtn) {
 openBackInTimeBtn.addEventListener("click", () => {
     backInTimeVideo.currentTime = 0;
     backInTimeContainer.classList.add("back-in-time--activated");
     backInTimeVideo.play();
+    setTimeout(() => {
+      previousSitesContent.classList.add("back-in-time--content-enter")
+    }, 1000);
 })
 }
 
@@ -65,3 +71,11 @@ button.addEventListener("click", function(){
     button.classList.add("copied-text");
 });
 }
+
+
+
+
+
+
+
+
