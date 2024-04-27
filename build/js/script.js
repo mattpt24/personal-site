@@ -83,6 +83,7 @@ button.addEventListener("click", function(){
 const circles = document.querySelectorAll(".circle");
 const landing = document.querySelector("#landing");
 
+if(landing) {
 landing.addEventListener("mousemove", (event) => {
 
   let mouseX = event.pageX;
@@ -94,6 +95,18 @@ landing.addEventListener("mousemove", (event) => {
   });
 
 });
+}
 
 
 
+
+
+const gridStyleToggle = document.querySelector(".grid-style-toggle");
+const portfolioProjects = document.querySelectorAll(".portfolio-project");
+
+gridStyleToggle.addEventListener("click", () => {
+  gridStyleToggle.classList.toggle("grid-btn--toggled");
+  portfolioProjects.forEach(x => {
+    x.classList.toggle("no-grid-style--activated");
+  })
+});

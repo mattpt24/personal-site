@@ -109,11 +109,21 @@ if (myText) {
 }
 var circles = document.querySelectorAll(".circle");
 var landing = document.querySelector("#landing");
-landing.addEventListener("mousemove", function (event) {
-  var mouseX = event.pageX;
-  var mouseY = event.pageY;
-  circles.forEach(function (x) {
-    var offset = x.dataset.offset;
-    x.style.transform = "translate(".concat(mouseX / offset, "px, ").concat(mouseY / offset, "px)");
+if (landing) {
+  landing.addEventListener("mousemove", function (event) {
+    var mouseX = event.pageX;
+    var mouseY = event.pageY;
+    circles.forEach(function (x) {
+      var offset = x.dataset.offset;
+      x.style.transform = "translate(".concat(mouseX / offset, "px, ").concat(mouseY / offset, "px)");
+    });
+  });
+}
+var gridStyleToggle = document.querySelector(".grid-style-toggle");
+var portfolioProjects = document.querySelectorAll(".portfolio-project");
+gridStyleToggle.addEventListener("click", function () {
+  gridStyleToggle.classList.toggle("grid-btn--toggled");
+  portfolioProjects.forEach(function (x) {
+    x.classList.toggle("no-grid-style--activated");
   });
 });

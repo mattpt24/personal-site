@@ -9,6 +9,9 @@
     .portfolio-page__title-container {
         width: 85%;
         margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
         @media screen and (max-width: $laptop) {
             width: 80%;
@@ -26,6 +29,43 @@
             line-height: 1.2;
             @media screen and (max-width: $tablet) {
                font-size: 2.8rem;
+            }
+        }
+
+        .grid-style-toggle {
+            transition: all .4s ease;
+            background: rgba(0,0,0,.1);
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @media screen and (max-width:$tablet) {
+                display: none;
+            }
+
+            i {
+                transition: all .4s ease;
+                font-size: 1.8rem;
+            }
+
+            &:hover {
+                transition: all .4s ease;
+                background: $clr-primary;
+                box-shadow: 0 0 10px $clr-primary;
+            }
+
+            &:hover > i {
+                transition: all .4s ease;
+                color: white;
+            }
+
+            &.grid-btn--toggled {
+                transition: all .4s ease;
+                background: $clr-primary;
+                color: white;
             }
         }
     }
@@ -53,11 +93,11 @@
       @media screen and (max-width: $mobile) {
         grid-template-columns: 1fr;
         grid-gap: 2rem;
+        margin: 1rem auto 2rem auto;
       }
 
 
     .portfolio-project {
-        transition: all .4s ease;
         position: relative;
         height: 400px;
         overflow: hidden;
@@ -75,13 +115,7 @@
 
 
 
-         &:nth-child(4n) {
-            grid-column: span 2;
-            @media screen and (max-width: $tablet) {
-                grid-column: span 1;
-            }
-         }
-         &:nth-child(3n) {
+         &:nth-of-type(3) {
             grid-row: span 2;
             height: 100%;
             @media screen and (max-width: $tablet) {
@@ -89,6 +123,37 @@
                 height: 300px;
             }
         }
+
+        &:nth-of-type(4) {
+            grid-column: span 2;
+            @media screen and (max-width: $tablet) {
+                grid-column: span 1;
+            }
+         }
+
+         &:nth-of-type(6) {
+            grid-column: span 2;
+            @media screen and (max-width: $tablet) {
+                grid-column:span 1;
+                height: 300px;
+            }
+         }
+
+         &:nth-of-type(7) {
+            grid-column: span 2;
+            @media screen and (max-width: $tablet) {
+                grid-column: span 1;
+            }
+         }
+
+
+
+
+         &.no-grid-style--activated {
+            grid-row: span 1!important;
+            grid-column: span 1!important;
+            height: 400px!important;
+         }
 
 
         img {
