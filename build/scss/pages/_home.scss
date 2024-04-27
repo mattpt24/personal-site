@@ -14,6 +14,9 @@
         opacity: 0;
         animation: circleEntrance .5s ease;
         animation-fill-mode: forwards;
+        @media screen and (max-width:$tablet) {
+            display:none;
+        }
 
         &.circle-1 {
             top: -10rem;
@@ -40,10 +43,11 @@
             animation-delay: 2s;
         } 
         &.circle-4 {
-            background:rgb(251, 82, 57,.6);
+            background:rgb(251, 82, 57,.4);
             bottom: 8rem;
             right: 10rem;
             animation-delay: 2.25s;
+            z-index: 1;
         }
     }
 
@@ -57,7 +61,7 @@
         object-fit: cover;
         object-position: center;
         pointer-events: none;
-        opacity: .4;
+        opacity: .3;
         transform: translateX(100%);
         animation: imageEntrance 1s ease;
         animation-delay: 1s;
