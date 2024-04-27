@@ -79,3 +79,21 @@ button.addEventListener("click", function(){
 
 
 
+
+const circles = document.querySelectorAll(".circle");
+const landing = document.querySelector("#landing");
+
+landing.addEventListener("mousemove", (event) => {
+
+  let mouseX = event.pageX;
+  let mouseY = event.pageY;
+
+  circles.forEach(x => {
+    const offset = x.dataset.offset;
+    x.style.transform = `translate(${mouseX / offset}px, ${mouseY / offset}px)`;
+  });
+
+});
+
+
+

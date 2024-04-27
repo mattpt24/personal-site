@@ -107,3 +107,13 @@ if (myText) {
     button.classList.add("copied-text");
   });
 }
+var circles = document.querySelectorAll(".circle");
+var landing = document.querySelector("#landing");
+landing.addEventListener("mousemove", function (event) {
+  var mouseX = event.pageX;
+  var mouseY = event.pageY;
+  circles.forEach(function (x) {
+    var offset = x.dataset.offset;
+    x.style.transform = "translate(".concat(mouseX / offset, "px, ").concat(mouseY / offset, "px)");
+  });
+});

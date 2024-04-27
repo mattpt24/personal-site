@@ -149,26 +149,28 @@
 
                             &:hover {
                                 transition: All .3s ease;
-                                margin-left: .8rem;
+                                padding-left: 2rem;
+                                color: $clr-primary;
                             }
 
                             &:hover:after {
                                 transition: All .4s ease;
-                                width: 100%;
-                                left: 0;
+                                transform: scale(1);
                             }
 
                             &:after {
                                 transition: All .4s ease;
                                 content: "";
                                 position: absolute;
-                                bottom:-.7rem;
-                                right: 0;
-                                width: 0;
-                                height: 8px;
-                                border-radius: 30px;
+                                bottom: 36%;
+                                left: 0;
+                                // width: 0;
+                                width: 20px;
+                                height: 20px;
                                 background: $clr-primary;
+                                border-radius: 50%;
                                 z-index: -1;
+                                transform: scale(0);
                             }
                         }
                     }
