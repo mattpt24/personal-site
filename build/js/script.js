@@ -89,10 +89,13 @@ landing.addEventListener("mousemove", (event) => {
   let mouseX = event.pageX;
   let mouseY = event.pageY;
 
+
+
   circles.forEach(x => {
     const offset = x.dataset.offset;
     x.style.transform = `translate(${mouseX / offset}px, ${mouseY / offset}px)`;
   });
+
 
 });
 }
@@ -104,9 +107,47 @@ landing.addEventListener("mousemove", (event) => {
 const gridStyleToggle = document.querySelector(".grid-style-toggle");
 const portfolioProjects = document.querySelectorAll(".portfolio-project");
 
+if(gridStyleToggle) {
 gridStyleToggle.addEventListener("click", () => {
   gridStyleToggle.classList.toggle("grid-btn--toggled");
   portfolioProjects.forEach(x => {
     x.classList.toggle("no-grid-style--activated");
   })
 });
+}
+
+
+
+const currentDate = document.querySelectorAll(".current-day");
+
+currentDate.forEach(x => {
+
+  let day;
+  switch (new Date().getDay()) {
+    case 0:
+    day = "Sunday";
+    break;
+    case 1:
+    day = "Monday";
+    break;
+    case 2:
+    day = "Tuesday";
+    break;
+    case 3:
+    day = "Wednesday";
+    break;
+    case 4:
+    day = "Thursday";
+    break;
+    case 5:
+    day = "Friday";
+    break;
+    case  6:
+    day = "Saturday";
+}
+
+
+x.innerHTML = day;
+
+
+})

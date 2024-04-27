@@ -121,9 +121,38 @@ if (landing) {
 }
 var gridStyleToggle = document.querySelector(".grid-style-toggle");
 var portfolioProjects = document.querySelectorAll(".portfolio-project");
-gridStyleToggle.addEventListener("click", function () {
-  gridStyleToggle.classList.toggle("grid-btn--toggled");
-  portfolioProjects.forEach(function (x) {
-    x.classList.toggle("no-grid-style--activated");
+if (gridStyleToggle) {
+  gridStyleToggle.addEventListener("click", function () {
+    gridStyleToggle.classList.toggle("grid-btn--toggled");
+    portfolioProjects.forEach(function (x) {
+      x.classList.toggle("no-grid-style--activated");
+    });
   });
+}
+var currentDate = document.querySelectorAll(".current-day");
+currentDate.forEach(function (x) {
+  var day;
+  switch (new Date().getDay()) {
+    case 0:
+      day = "Sunday";
+      break;
+    case 1:
+      day = "Monday";
+      break;
+    case 2:
+      day = "Tuesday";
+      break;
+    case 3:
+      day = "Wednesday";
+      break;
+    case 4:
+      day = "Thursday";
+      break;
+    case 5:
+      day = "Friday";
+      break;
+    case 6:
+      day = "Saturday";
+  }
+  x.innerHTML = day;
 });
